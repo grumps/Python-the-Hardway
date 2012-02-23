@@ -3,6 +3,6 @@
 # 1. You follow the folder structure I have in Github
 # 2. You storing the file's in your home directory. If not, then cd to the folder and execute.
 
-cd ~/Python-the-Hardway
-rm Lesson_*/Lesson*.pyc >> Log.txt
-rm Lesson_*/Lesson*.py~ >> Log.txt
+
+find -name \*.py~ -exec rm -v {} \ >log;
+find -name \*.pyc -exec rm -v {} \ >>log;
