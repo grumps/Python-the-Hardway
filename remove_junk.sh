@@ -4,5 +4,5 @@
 # 2. You storing the file's in your home directory. If not, then cd to the folder and execute.
 
 
-find -name \*.py~ -exec rm -v {} \ >log;
-find -name \*.pyc -exec rm -v {} \ >>log;
+find -name \*.py~ -exec rm -v {} \; 
+find -name \*.pyc -exec rm -v {} \;
