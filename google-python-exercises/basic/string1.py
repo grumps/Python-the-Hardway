@@ -25,6 +25,7 @@
 # and donuts(23) returns 'Number of donuts: many'
 
 def donuts(count):
+  #Ensures that the only counts of less than ten return the count #
   if count < 10:
     return "Number of donuts: %c" % str(count) 
   else:
@@ -59,8 +60,14 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-  # +++your code here+++
-  return
+  #get first letter of s
+  first_letter = s[0]
+  #make new string minus the first position
+  new_string = s[1:]
+  new_string = new_string.replace(first_letter,'*')
+  #brings character back
+  final = first_letter + new_string
+  return str(final)
 
 
 # D. MixUp
