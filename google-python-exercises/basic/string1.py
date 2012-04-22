@@ -78,8 +78,12 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
+  
+  #take the first two of 'Y' and puts them with  of 'Y' 2+
+  new_a = b[0:2] + a[2:]
+  new_b = a[0:2] + b[2:] 
+  #return, adds the strings togehter and gives the desired syntax
+  return str(new_a) + ' ' + str(new_b)
 
 
 # Provided simple test() function used in main() to print
