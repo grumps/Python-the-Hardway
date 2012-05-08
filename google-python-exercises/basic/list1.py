@@ -40,12 +40,23 @@ def match_ends(words):
 # before combining them.
 def front_x(words):
   # MJR Solution
-  wordsinorder = sorted(words, key=str.lower)
-  wordsinreverse = sorted(words, key=str.lower, reverse=True)
-  print wordsinorder
-  print wordsinreverse
+  #Believe in using 'i' for interations.
+  i = 0
+  x_list = []
+  r_list = []
   
-  return
+  for i in words:
+	if i.startswith('x'):
+		x_list.append(i)
+	else:
+		r_list.append(i)
+	
+  #wordsinorder = sorted(words, key=str.lower)
+  #wordsinreverse = sorted(words, key=str.lower, reverse=True)
+  #print wordsinorder
+  #print wordsinreverse
+  
+  return sorted(x_list, key=str.lower) + sorted(r_list, key=str.lower)
 
 
 
@@ -56,8 +67,10 @@ def front_x(words):
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
-  # +++your code here+++
-  return
+  # MJR Solution
+  # Use standard functions
+  from operator import itemgetter
+  return sorted(tuples, key=itemgetter(-1))
 
 
 # Simple provided test() function used in main() to print
