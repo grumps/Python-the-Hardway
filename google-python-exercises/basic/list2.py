@@ -14,7 +14,13 @@
 # modify the passed in list.
 def remove_adjacent(nums):
   # +++your code here+++
-  return
+  #
+  unique = []
+  discv_unique = sorted(nums)
+  for i in discv_unique:
+    if i != discv_unique[(i-1)]:
+      unique.append(i)
+  return unique
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
